@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample JavaScript Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to My JavaScript Page</h1>
+        <p id="message">Click the button to get a greeting!</p>
+        <button onclick="showGreeting()">Get Greeting</button>
+        <p id="sum"></p>
+    </div>
+
+    <script>
+        // Function to greet a user
+        function greetUser(name) {
+            return `Hello, ${name}!`;
+        }
+
+        // Function to add two numbers
+        function addNumbers(a, b) {
+            return a + b;
+        }
+
+        // Function to display a message on the webpage
+        function displayMessage(message) {
+            document.getElementById('message').textContent = message;
+        }
+
+        // Function to show greeting and sum when button is clicked
+        function showGreeting() {
+            const userName = 'Alice';
+            const greeting = greetUser(userName);
+            displayMessage(greeting);
+
+            const sum = addNumbers(5, 7);
+            document.getElementById('sum').textContent = `The sum of 5 and 7 is: ${sum}`;
+        }
+    </script>
+
+           <script>
+        (function(d,t) {
+          var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+          g.src="http://34.221.108.10:3000/embed.js"
+          s.parentNode.insertBefore(g,s);
+          g.onload=function(){
+            new window.ChaskiqMessengerEncrypted({
+              domain: 'http://34.221.108.10:3000',
+              ws:  'ws://34.221.108.10:3000/cable',
+              app_id: "7AiXaTrSzSt4R4nnHM1QKG7P",
+              data: "YOUR_ENCRYPTED_JWE_DATA",
+              lang: "USER_LANG_OR_DEFAULTS_TO_BROWSER_LANG" 
+            })
+          }
+        })(document,"script");
+      </script>
+</body>
+</html>
+
